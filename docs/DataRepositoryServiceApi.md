@@ -5,7 +5,6 @@ All URIs are relative to */*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_object_ga4gh_drs_v1_objects_object_id_delete**](DataRepositoryServiceApi.md#delete_object_ga4gh_drs_v1_objects_object_id_delete) | **DELETE** /ga4gh/drs/v1/objects/{object_id} | Delete a DrsObject
-[**get_health_ga4gh_drs_v1_health_get**](DataRepositoryServiceApi.md#get_health_ga4gh_drs_v1_health_get) | **GET** /ga4gh/drs/v1/health | Check if the API is running correctly
 [**get_object_alias_ga4gh_drs_v1_objects_get**](DataRepositoryServiceApi.md#get_object_alias_ga4gh_drs_v1_objects_get) | **GET** /ga4gh/drs/v1/objects | Query DrsObjects on alias
 [**get_object_ga4gh_drs_v1_objects_object_id_access_access_id_get**](DataRepositoryServiceApi.md#get_object_ga4gh_drs_v1_objects_object_id_access_access_id_get) | **GET** /ga4gh/drs/v1/objects/{object_id}/access/{access_id} | Get a URL for fetching bytes
 [**get_object_ga4gh_drs_v1_objects_object_id_get**](DataRepositoryServiceApi.md#get_object_ga4gh_drs_v1_objects_object_id_get) | **GET** /ga4gh/drs/v1/objects/{object_id} | Retrieve a DrsObject
@@ -27,9 +26,11 @@ import drs_api
 from drs_api.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
+# Configure API key authorization: OAuth2PasswordBearer
 configuration = drs_api.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = drs_api.DataRepositoryServiceApi(drs_api.ApiClient(configuration))
@@ -64,54 +65,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_health_ga4gh_drs_v1_health_get**
-> list[DrsObject] get_health_ga4gh_drs_v1_health_get()
-
-Check if the API is running correctly
-
-Health check for the API
-
-### Example
-```python
-from __future__ import print_function
-import time
-import drs_api
-from drs_api.rest import ApiException
-from pprint import pprint
-
-# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = drs_api.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# create an instance of the API class
-api_instance = drs_api.DataRepositoryServiceApi(drs_api.ApiClient(configuration))
-
-try:
-    # Check if the API is running correctly
-    api_response = api_instance.get_health_ga4gh_drs_v1_health_get()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DataRepositoryServiceApi->get_health_ga4gh_drs_v1_health_get: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**list[DrsObject]**](DrsObject.md)
-
-### Authorization
-
-[OAuth2PasswordBearer](../README.md#OAuth2PasswordBearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **get_object_alias_ga4gh_drs_v1_objects_get**
 > list[DrsObject] get_object_alias_ga4gh_drs_v1_objects_get(alias)
 
@@ -127,9 +80,11 @@ import drs_api
 from drs_api.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
+# Configure API key authorization: OAuth2PasswordBearer
 configuration = drs_api.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = drs_api.DataRepositoryServiceApi(drs_api.ApiClient(configuration))
@@ -179,9 +134,11 @@ import drs_api
 from drs_api.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
+# Configure API key authorization: OAuth2PasswordBearer
 configuration = drs_api.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = drs_api.DataRepositoryServiceApi(drs_api.ApiClient(configuration))
@@ -233,9 +190,11 @@ import drs_api
 from drs_api.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
+# Configure API key authorization: OAuth2PasswordBearer
 configuration = drs_api.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = drs_api.DataRepositoryServiceApi(drs_api.ApiClient(configuration))
@@ -287,9 +246,11 @@ import drs_api
 from drs_api.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
+# Configure API key authorization: OAuth2PasswordBearer
 configuration = drs_api.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = drs_api.DataRepositoryServiceApi(drs_api.ApiClient(configuration))
@@ -339,9 +300,11 @@ import drs_api
 from drs_api.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
+# Configure API key authorization: OAuth2PasswordBearer
 configuration = drs_api.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = drs_api.DataRepositoryServiceApi(drs_api.ApiClient(configuration))
