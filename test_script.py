@@ -1,11 +1,14 @@
-import drs_api
+import drs_api, os
 from drs_api.rest import ApiException
 from drs_api import Configuration
+from dotenv import load_dotenv
+
+load_dotenv()
 
 configuration = Configuration()
-configuration.host = "https://drs.test.cmgg.be"
-configuration.username = "admin"
-configuration.password = "password"
+configuration.host = os.getenv('DRS_URL','')
+configuration.username = os.getenv('DRS_USERNAME','')
+configuration.password = os.getenv('DRS_PASSWORD','')
 ## Uncomment and set expired token to test refresh
 #expired_token = ""
 #configuration.api_key = {"Authorization":expired_token}
