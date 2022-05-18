@@ -20,7 +20,7 @@ from drs_api.api.health_api import HealthApi
 from drs_api.api.login_api import LoginApi
 # import ApiClient
 from drs_api.api_client import ApiClient
-from drs_api.configuration import Configuration
+from drs_api.drs_configuration import DrsConfiguration as Configuration
 # import models into sdk package
 from drs_api.models.access_methods import AccessMethods
 from drs_api.models.access_url import AccessURL
