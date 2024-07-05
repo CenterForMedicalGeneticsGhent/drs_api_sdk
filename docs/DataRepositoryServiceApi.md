@@ -26,11 +26,9 @@ import drs_api
 from drs_api.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: OAuth2PasswordBearer
+# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
 configuration = drs_api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = drs_api.DataRepositoryServiceApi(drs_api.ApiClient(configuration))
@@ -80,11 +78,9 @@ import drs_api
 from drs_api.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: OAuth2PasswordBearer
+# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
 configuration = drs_api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = drs_api.DataRepositoryServiceApi(drs_api.ApiClient(configuration))
@@ -134,11 +130,9 @@ import drs_api
 from drs_api.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: OAuth2PasswordBearer
+# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
 configuration = drs_api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = drs_api.DataRepositoryServiceApi(drs_api.ApiClient(configuration))
@@ -190,11 +184,9 @@ import drs_api
 from drs_api.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: OAuth2PasswordBearer
+# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
 configuration = drs_api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = drs_api.DataRepositoryServiceApi(drs_api.ApiClient(configuration))
@@ -246,11 +238,9 @@ import drs_api
 from drs_api.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: OAuth2PasswordBearer
+# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
 configuration = drs_api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = drs_api.DataRepositoryServiceApi(drs_api.ApiClient(configuration))
@@ -300,11 +290,9 @@ import drs_api
 from drs_api.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: OAuth2PasswordBearer
+# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
 configuration = drs_api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = drs_api.DataRepositoryServiceApi(drs_api.ApiClient(configuration))

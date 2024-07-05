@@ -36,9 +36,9 @@ class DrsObject(object):
         'updated_time': 'str',
         'version': 'str',
         'mime_type': 'str',
-        'checksums': 'AllOfDrsObjectChecksums',
-        'access_methods': 'AllOfDrsObjectAccessMethods',
-        'contents': 'AllOfDrsObjectContents',
+        'checksums': 'list[Checksum]',
+        'access_methods': 'list[AccessMethods]',
+        'contents': 'list[ContentsExpanded]',
         'description': 'str',
         'aliases': 'list[str]'
     }
@@ -296,7 +296,7 @@ class DrsObject(object):
         The checksum of the ```DrsObject```. At least one checksum must be provided.         For blobs, the checksum is computed over the bytes in the blob.         For bundles, the checksum is computed over a sorted concatenation of the checksums of its         top-level contained objects (not recursive, names not included).         The list of checksums is sorted alphabetically (hex-code) before concatenation         and a further checksum is performed on the concatenated checksum value.         For example, if a bundle contains blobs with the following checksums:         md5(blob1) = 72794b6d md5(blob2) = 5e089d29 Then the checksum of the bundle is:         md5( concat( sort( md5(blob1), md5(blob2) ) ) ) = md5( concat( sort( 72794b6d, 5e089d29 ) ) ) =         md5( concat( 5e089d29, 72794b6d ) ) = md5( 5e089d2972794b6d ) = f7a29a04  # noqa: E501
 
         :return: The checksums of this DrsObject.  # noqa: E501
-        :rtype: AllOfDrsObjectChecksums
+        :rtype: list[Checksum]
         """
         return self._checksums
 
@@ -307,7 +307,7 @@ class DrsObject(object):
         The checksum of the ```DrsObject```. At least one checksum must be provided.         For blobs, the checksum is computed over the bytes in the blob.         For bundles, the checksum is computed over a sorted concatenation of the checksums of its         top-level contained objects (not recursive, names not included).         The list of checksums is sorted alphabetically (hex-code) before concatenation         and a further checksum is performed on the concatenated checksum value.         For example, if a bundle contains blobs with the following checksums:         md5(blob1) = 72794b6d md5(blob2) = 5e089d29 Then the checksum of the bundle is:         md5( concat( sort( md5(blob1), md5(blob2) ) ) ) = md5( concat( sort( 72794b6d, 5e089d29 ) ) ) =         md5( concat( 5e089d29, 72794b6d ) ) = md5( 5e089d2972794b6d ) = f7a29a04  # noqa: E501
 
         :param checksums: The checksums of this DrsObject.  # noqa: E501
-        :type: AllOfDrsObjectChecksums
+        :type: list[Checksum]
         """
         if checksums is None:
             raise ValueError("Invalid value for `checksums`, must not be `None`")  # noqa: E501
@@ -321,7 +321,7 @@ class DrsObject(object):
         The list of access methods that can be used to fetch the ```DrsObject```. Required for single blobs; optional for bundles.  # noqa: E501
 
         :return: The access_methods of this DrsObject.  # noqa: E501
-        :rtype: AllOfDrsObjectAccessMethods
+        :rtype: list[AccessMethods]
         """
         return self._access_methods
 
@@ -332,7 +332,7 @@ class DrsObject(object):
         The list of access methods that can be used to fetch the ```DrsObject```. Required for single blobs; optional for bundles.  # noqa: E501
 
         :param access_methods: The access_methods of this DrsObject.  # noqa: E501
-        :type: AllOfDrsObjectAccessMethods
+        :type: list[AccessMethods]
         """
 
         self._access_methods = access_methods
@@ -344,7 +344,7 @@ class DrsObject(object):
         If not set, this ```DrsObject``` is a single blob. If set, this ```DrsObject``` is a bundle containing         the listed ```ContentsObject``` s (some of which may be further nested).  # noqa: E501
 
         :return: The contents of this DrsObject.  # noqa: E501
-        :rtype: AllOfDrsObjectContents
+        :rtype: list[ContentsExpanded]
         """
         return self._contents
 
@@ -355,7 +355,7 @@ class DrsObject(object):
         If not set, this ```DrsObject``` is a single blob. If set, this ```DrsObject``` is a bundle containing         the listed ```ContentsObject``` s (some of which may be further nested).  # noqa: E501
 
         :param contents: The contents of this DrsObject.  # noqa: E501
-        :type: AllOfDrsObjectContents
+        :type: list[ContentsExpanded]
         """
 
         self._contents = contents
