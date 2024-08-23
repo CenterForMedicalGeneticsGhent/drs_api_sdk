@@ -20,16 +20,13 @@ from drs_api.api.health_api import HealthApi
 from drs_api.api.login_api import LoginApi
 # import ApiClient
 from drs_api.api_client import ApiClient
-from drs_api.drs_configuration import DrsConfiguration as Configuration
+from drs_api.configuration import Configuration
 # import models into sdk package
 from drs_api.models.access_methods import AccessMethods
 from drs_api.models.access_url import AccessURL
-from drs_api.models.all_of_drs_object_access_methods import AllOfDrsObjectAccessMethods
-from drs_api.models.all_of_drs_object_checksums import AllOfDrsObjectChecksums
-from drs_api.models.all_of_drs_object_contents import AllOfDrsObjectContents
 from drs_api.models.basic_response import BasicResponse
 from drs_api.models.body_login_token_post import BodyLoginTokenPost
-from drs_api.models.checksums import Checksums
+from drs_api.models.checksum import Checksum
 from drs_api.models.contents_expanded import ContentsExpanded
 from drs_api.models.drs_object import DrsObject
 from drs_api.models.error import Error

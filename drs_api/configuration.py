@@ -61,6 +61,8 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         self.username = ""
         # Password for HTTP basic authentication
         self.password = ""
+        # access token for OAuth
+        self.access_token = ""
         # Logging Settings
         self.logger = {}
         self.logger["package_logger"] = logging.getLogger("drs_api")
@@ -231,10 +233,10 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         return {
             'OAuth2PasswordBearer':
                 {
-                    'type': 'api_key',
+                    'type': 'oauth2',
                     'in': 'header',
                     'key': 'Authorization',
-                    'value': self.get_api_key_with_prefix('Authorization')
+                    'value': 'Bearer ' + self.access_token
                 },
         }
 
@@ -247,5 +249,5 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 1.2.0\n"\
-               "SDK Package Version: 1.0.0".\
+               "SDK Package Version: 1.1.0".\
                format(env=sys.platform, pyversion=sys.version)

@@ -1,6 +1,5 @@
 # coding: utf-8
 
-# flake8: noqa
 """
     Data Repository Service
 
@@ -13,15 +12,28 @@
 
 from __future__ import absolute_import
 
-# import models into model package
-from drs_api.models.access_methods import AccessMethods
-from drs_api.models.access_url import AccessURL
-from drs_api.models.basic_response import BasicResponse
-from drs_api.models.body_login_token_post import BodyLoginTokenPost
-from drs_api.models.checksum import Checksum
-from drs_api.models.contents_expanded import ContentsExpanded
-from drs_api.models.drs_object import DrsObject
-from drs_api.models.error import Error
-from drs_api.models.http_validation_error import HTTPValidationError
-from drs_api.models.token import Token
-from drs_api.models.validation_error import ValidationError
+import unittest
+
+import drs_api
+from drs_api.models.checksum import Checksum  # noqa: E501
+from drs_api.rest import ApiException
+
+
+class TestChecksum(unittest.TestCase):
+    """Checksum unit test stubs"""
+
+    def setUp(self):
+        pass
+
+    def tearDown(self):
+        pass
+
+    def testChecksum(self):
+        """Test Checksum"""
+        # FIXME: construct object with mandatory attributes with example values
+        # model = drs_api.models.checksum.Checksum()  # noqa: E501
+        pass
+
+
+if __name__ == '__main__':
+    unittest.main()
